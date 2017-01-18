@@ -2,7 +2,7 @@
 
 ## Building
 
-All included code is cross platform compatible, currently benchmarks assume x64.
+All included code is cross platform compatible, currently benchmarks assume x64.  
 Build scripts for Visual Studio are included until I get around to cmake
 
 ### Windows 
@@ -12,8 +12,8 @@ git clone https://github.com/moflow/disassembler-benchmarks.git
 cd disassembler-benchmarks\src && build.bat
 ```
 
-Note this will check out src and attempt to build all libraries and decoders.  
-This currently takes about 7 mins.
+Note this will check out src and attempt to build all decoder libraries and benchmarks.  
+This currently takes about 7 mins and takes 350 MB for the build trees.
 
 ## Benchmarks
 
