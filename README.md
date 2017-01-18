@@ -81,17 +81,17 @@ target: kernelbase.dll .text
 length: 1048576 bytes
 
 Benchmark: decode to struct speed..
-Time elapsed: 0.91s
+Time elapsed: 0.88s
 
 Benchmark: decode to ascii speed..
-Time elapsed: 0.66s
+Time elapsed: 0.65s
 
 Benchmark: print ascii to /dev/null speed..
-Time elapsed: 0.163s
+Time elapsed: 0.145s
 
 Benchmark: decoder accuracy..
-402581 decoded, 1627 errors
-Time elapsed: 0.89s
+304597 decoded, 4600 errors
+Time elapsed: 0.85s
 
 Disassembler Benchmark complete.
 ```

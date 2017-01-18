@@ -7,8 +7,8 @@ cd ..\decoders && call build-beaengine.bat
 popd 
 set libs=..\decoders\beaengine\beaengine\lib\Windows.msvc.RelWithDebInfo.64\Release
 set inc=..\decoders\beaengine\beaengine\headers
-cl.exe /Ox /I %inc% beaengine-benchmark.c /link /VERBOSE:LIB /LIBPATH:%libs% beaengine_s_l_64.lib
-
+cl.exe /Ox /I %inc% beaengine-benchmark.c /link /NODEFAULTLIB:msvcrt /LIBPATH:%libs% beaengine_s_l_64.lib
+REM goto :END
 
 REM Build XED benchmark with latest build of xed kit
 pushd . 

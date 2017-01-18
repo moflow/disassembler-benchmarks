@@ -11,6 +11,7 @@ DISASM MyDisasm;
 void disas_init()
 {
 	(void)memset(&MyDisasm, 0, sizeof(DISASM));
+	MyDisasm.Archi = 64;
 }
 
 void benchmark_decode_bytes(uint64_t addr, uint32_t len)
