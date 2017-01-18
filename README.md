@@ -71,3 +71,27 @@ Time elapsed: 0.128s
 
 Disassembler Benchmark complete.
 ```
+
+### BeaEngine Disassembler
+```
+Disassembler Benchmark: beaengine-benchmark.exe
+
+target: kernelbase.dll .text
+  addr: 0x7fff82711000
+length: 1048576 bytes
+
+Benchmark: decode to struct speed..
+Time elapsed: 0.91s
+
+Benchmark: decode to ascii speed..
+Time elapsed: 0.66s
+
+Benchmark: print ascii to /dev/null speed..
+Time elapsed: 0.163s
+
+Benchmark: decoder accuracy..
+402581 decoded, 1627 errors
+Time elapsed: 0.89s
+
+Disassembler Benchmark complete.
+```
