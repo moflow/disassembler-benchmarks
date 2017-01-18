@@ -1,5 +1,13 @@
 @echo off
 
+pushd .
+cd ..\decoders && call build-distorm.bat
+popd
+set libs=..\decoders\distorm\distorm
+set inc=..\decoders\distorm\distorm\include
+cl.exe /MT /Ox /I %inc% distorm-benchmark.c /link /LIBPATH:%libs% distorm.lib 
+REM goto :END
+
 
 REM Build BeaEngine
 pushd .
@@ -8,7 +16,7 @@ popd
 set libs=..\decoders\beaengine\beaengine\lib\Windows.msvc.RelWithDebInfo.64\Release
 set inc=..\decoders\beaengine\beaengine\headers
 cl.exe /Ox /I %inc% beaengine-benchmark.c /link /NODEFAULTLIB:msvcrt /LIBPATH:%libs% beaengine_s_l_64.lib
-REM goto :END
+
 
 REM Build XED benchmark with latest build of xed kit
 pushd . 
