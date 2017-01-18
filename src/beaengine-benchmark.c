@@ -52,10 +52,8 @@ void benchmark_decode_ascii(uint64_t addr, uint32_t len)
 			offset++;
 			continue;
 		}
-		offset += insn_len;
 		uint8_t insn_text[64];
 		sprintf(insn_text, "%s", MyDisasm.CompleteInstr);
-		//fprintf(stderr, "%llx[%d]: %s\n", curr_addr, insn_len, MyDisasm.CompleteInstr);
 		offset += insn_len;
 	}
 }
@@ -77,7 +75,6 @@ void benchmark_decode_print(uint64_t addr, uint32_t len)
 			offset++;
 			continue;
 		}
-		offset += insn_len;
 		uint8_t insn_text[64];
 		sprintf(insn_text, "%s", MyDisasm.CompleteInstr);
 		fprintf(devnull, "%llx:\t%s\n", curr_addr, &insn_text);
