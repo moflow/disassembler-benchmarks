@@ -11,9 +11,11 @@ cl.exe /I %xedkit%\include xed-benchmark.c /link /LIBPATH:%xedkit%\lib xed.lib x
 
 
 
+REM Build Capstone
 
-
-
+set libs=..\decoders\capstone\capstone\msvc\x64\Release
+set inc=..\decoders\capstone\capstone\include
+REM cl.exe /I %inc% capstone-benchmark.c /link /LIBPATH:%libs% capstone.lib
 
 REM For /f "tokens=2-4 delims=/ " %%a in ('date /t') do (set tdate=%%c-%%a-%%b)
 REM echo %tdate%
