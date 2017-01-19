@@ -24,6 +24,10 @@ Current benchmarks supported
 - print address and instruction to null device
 - decoder accuracy
 
+The current input is 1 MB taken from the kernelbase.dll .text section generated via:  
+`dd if=/mnt/c/Windows/System32/KernelBase.dll of=kernelbase.text bs=1 skip=0x400 count=$((1024*1024))`
+
+
 ### Xed Disassembler
 ```
 Disassembler Benchmark: xed-benchmark.exe
