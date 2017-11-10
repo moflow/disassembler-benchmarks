@@ -139,21 +139,21 @@ int main(int argc, char **argv)
 	benchmark_decode_bytes(code_addr, code_len);
 	clockdiff = clock() - clockstart;
 	msec = clockdiff * 1000 / CLOCKS_PER_SEC;
-	printf("Time elapsed: %d.%ds\n\n", msec / 1000, msec % 1000);
+	printf("Time elapsed: %d.%03ds\n\n", msec / 1000, msec % 1000);
 	
 	printf("Benchmark: decode to ascii speed.. \n");
 	clockstart = clock();
 	benchmark_decode_ascii(code_addr, code_len);
 	clockdiff = clock() - clockstart;
 	msec = clockdiff * 1000 / CLOCKS_PER_SEC;
-	printf("Time elapsed: %d.%ds\n\n", msec / 1000, msec % 1000);
+	printf("Time elapsed: %d.%03ds\n\n", msec / 1000, msec % 1000);
 
 	printf("Benchmark: print ascii to /dev/null speed.. \n");
 	clockstart = clock();
 	benchmark_decode_print(code_addr, code_len);
 	clockdiff = clock() - clockstart;
 	msec = clockdiff * 1000 / CLOCKS_PER_SEC;
-	printf("Time elapsed: %d.%ds\n\n", msec / 1000, msec % 1000);
+	printf("Time elapsed: %d.%03ds\n\n", msec / 1000, msec % 1000);
 
 	printf("Benchmark: decoder accuracy.. \n");
 	clockstart = clock();
@@ -161,7 +161,7 @@ int main(int argc, char **argv)
 	clockdiff = clock() - clockstart;
 	msec = clockdiff * 1000 / CLOCKS_PER_SEC;
 	printf("%d decoded, %d errors\n", insn_count, error_count);
-	printf("Time elapsed: %d.%ds\n\n", msec / 1000, msec % 1000);
+	printf("Time elapsed: %d.%03ds\n\n", msec / 1000, msec % 1000);
 	
 	printf("Disassembler Benchmark complete.\n\n");
 
